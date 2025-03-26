@@ -1,0 +1,73 @@
+.theme {
+    display: flex;
+    width: 100%;
+    button {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+.lightButton {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.darkButton {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.container-switch {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.container-switch .switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.container-switch .switch input {
+    display: none;
+}
+
+.container-switch .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.container-switch .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: '';
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+.container-switch input:checked + .slider {
+    background-color: #3a3a3a;
+}
+
+.container-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.container-switch .slider.round {
+    border-radius: 34px;
+}
+
+.container-switch .slider.round:before {
+    border-radius: 50%;
+}

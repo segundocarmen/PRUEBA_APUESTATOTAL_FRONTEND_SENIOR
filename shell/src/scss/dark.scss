@@ -1,0 +1,49 @@
+@use './colors' as color;
+
+body.dark #root {
+    background: radial-gradient(
+        75.43% 150.58% at 15.18% 110.07%,
+        color.$blackColor2 5%,
+        color.$blackColor2 25.41%,
+        color.$blackColor 56.43%,
+        color.$blackColor 69.58%,
+        color.$blackColor 100%
+    );
+}
+
+body.dark .type_pokemon {
+    background-color: color.$blackColor3;
+}
+
+body.dark .typename,
+body.dark .head h1 {
+    color: color.$whiteSmoke;
+}
+
+body.dark .at_button {
+    background-color: color.$purple !important;
+}
+
+body.dark .type_pokemon::-webkit-scrollbar-thumb {
+    background-color: color.$purple; /* color of the scroll thumb */
+}
+
+body.dark .main_header {
+    background-color: color.$blackColor !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+body.dark .modal-container {
+    background-color: color.$blackColor;
+}
+body.dark .modal-header,
+body.dark .modal-header > span,
+body.dark .modal-header > button {
+    color: color.$whiteSmoke;
+}
+
+body.dark .logout {
+    background-color: color.$blackColor;
+    background-image: url('/img/shut-down-purple.svg');
+    border: 1px solid color.$purple;
+}

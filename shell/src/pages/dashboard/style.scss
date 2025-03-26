@@ -1,0 +1,12 @@
+.head {
+    align-items: center;
+    button {
+        width: 120px;
+    }
+    h1 {
+        font-size: 18px;
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}

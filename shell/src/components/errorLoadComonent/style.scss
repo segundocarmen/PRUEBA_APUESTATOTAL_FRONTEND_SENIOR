@@ -1,0 +1,12 @@
+@use '../../scss/colors.scss' as color;
+.error_wrapper {
+    padding: 10px;
+    box-sizing: border-box;
+}
+.error {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: color.$lightRed;
+}

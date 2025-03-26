@@ -1,0 +1,63 @@
+@use '../../scss/colors.scss' as color;
+.backdrop {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transition: all 0.1s ease-out;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.backdrop.invisible {
+    scale: 0;
+}
+.backdrop.visible {
+    scale: 1;
+}
+.modal-container {
+    background-color: color.$whiteColor;
+    padding: 40px 10px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: all 0.1s ease-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        padding: 50px 50px 20px;
+    }
+}
+.modal-container.size-regular {
+    width: 100%;
+    max-width: 450px;
+}
+.modal-container.size-fullscreen {
+    width: 100%;
+    height: 100%;
+}
+.modal-header {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+.modal-body {
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.modal-footer button {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}

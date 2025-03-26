@@ -1,0 +1,143 @@
+@use './colors' as color;
+// @font-face {
+//     font-family: 'WikiSans';
+//     src: url('fonts/wiki-sans/WinkySans-Regular.ttf') format('truetype');
+// }
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0;
+    margin: 0;
+}
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page {
+    display: block;
+    margin: auto;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 10px;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+        max-width: 600px;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 900px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1100px;
+    }
+}
+.welcome {
+    min-height: auto !important;
+}
+
+.dflex {
+    display: flex;
+}
+
+.jcbetween {
+    justify-content: space-between;
+}
+
+.at_button {
+    border-radius: 9px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid color.$whiteSmoke;
+    cursor: pointer;
+    min-width: 80px;
+    width: 100%;
+    &.active {
+        background-color: color.$blueColor;
+        color: color.$whiteColor;
+    }
+}
+.at_button_clear {
+    cursor: pointer;
+    border: none;
+    padding: 2px 7px;
+    background: transparent;
+}
+.form-item {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-control {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 5px auto;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.bg-primary {
+    background-color: color.$primaryColor;
+}
+
+.bg-yellow {
+    background-color: color.$yellow;
+}
+
+.bg-red {
+    background-color: color.$darkRedColor;
+}
+
+.bg-white {
+    background-color: color.$whiteColor;
+}
+
+.cl-primary {
+    color: color.$primaryColor;
+}
+
+.cl-yellow {
+    color: color.$yellow;
+}
+
+.cl-red {
+    color: color.$darkRedColor;
+}
+
+.cl-white {
+    color: color.$whiteColor;
+}
+
+body #root {
+    background: radial-gradient(
+        75.43% 150.58% at 15.18% 110.07%,
+        color.$background2 5%,
+        color.$background2 25.41%,
+        color.$background 56.43%,
+        color.$background 69.58%,
+        color.$background 100%
+    );
+}

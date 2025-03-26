@@ -1,0 +1,52 @@
+.pokeball_runs {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 2%;
+    height: 160px;
+    background: transparent;
+}
+.pokeballWrapper {
+    animation: scrollMobile 3s linear infinite;
+    @media screen and (min-width: 600px) {
+        animation: scroll 4s linear infinite;
+    }
+    @media screen and (min-width: 768px) {
+        animation: scroll 4s linear infinite;
+    }
+    @media screen and (min-width: 1024px) {
+        animation: scroll 5s linear infinite;
+    }
+    @media screen and (min-width: 1200px) {
+        animation: scroll 6s linear infinite;
+    }
+}
+.pokeballcontainer {
+    width: 160px;
+    height: 160px;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scrollMobile {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(-10%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}

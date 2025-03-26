@@ -1,0 +1,60 @@
+@use '../../scss/colors.scss' as color;
+
+.type {
+    display: flex;
+    flex-direction: column;
+
+    &_pokemon {
+        overflow: auto;
+        display: flex;
+        padding: 20px 0;
+        &_detail {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 140px;
+            margin: 0 10px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.4);
+            img {
+                margin: auto 10px;
+            }
+            span {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+}
+.typename {
+    padding: 10px;
+    color: color.$blueColor;
+    padding-bottom: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.type_pokemon.column {
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.type_pokemon::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+.type_pokemon::-webkit-scrollbar-track {
+    background: color.$whiteColor; /* color of the tracking area */
+}
+
+.type_pokemon::-webkit-scrollbar-thumb {
+    background-color: color.$blueColor; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid color.$whiteColor; /* creates padding around scroll thumb */
+}
+
+.type_pokemon_detail.column {
+    margin-bottom: 5px10px;
+}
