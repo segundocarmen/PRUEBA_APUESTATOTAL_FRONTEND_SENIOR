@@ -6,6 +6,7 @@
     bottom: 2%;
     height: 160px;
     background: transparent;
+    z-index: 10;
 }
 .pokeballWrapper {
     animation: scrollMobile 3s linear infinite;
